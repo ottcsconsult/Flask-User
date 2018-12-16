@@ -28,6 +28,7 @@ from .user_manager import UserManager
 from .email_manager import EmailManager
 from .password_manager import PasswordManager
 from .token_manager import TokenManager
+from .db_manager import DBManager
 
 # Export Flask-User decorators
 from .decorators import *
