@@ -80,7 +80,12 @@ class PasswordManager(object):
             password_hash = password_hash.password   # effectively user.password
 
         # Use passlib's CryptContext to verify a password
-        return self.password_crypt_context.verify(password, password_hash)
+        try:
+            res = self.password_crypt_context.verify(password, password_hash)
+        except:
+            res = False
+            
+        return res
 
 
 
